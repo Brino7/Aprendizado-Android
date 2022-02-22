@@ -22,10 +22,11 @@ public class SegundaActivity extends AppCompatActivity {
         Bundle dados = getIntent().getExtras();
         String nome = dados.getString( "nome" );
         int idade = dados.getInt("idade");
+        Usuario usuario = (Usuario) dados.getSerializable("objeto");
 
         //Configurando valores recuperados
 
-        textNome.setText(nome);
+        textNome.setText(usuario.getEmail());
         textIdade.setText(String.valueOf(idade));
 
     }
